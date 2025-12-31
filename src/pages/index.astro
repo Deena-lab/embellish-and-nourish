@@ -14,16 +14,20 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
         --jade-bg: #f3fbf8;
         --jade-soft: #dff3ec;
         --jade-main: #6fb7a7;
-        --jade-dark: #3f7f73;
-        --text-main: #1f2d2a;
-        --border-soft: rgba(63, 127, 115, 0.25);
+        --jade-dark: #2f6f64;
+
+        --text: #162422;
+        --muted: rgba(22, 36, 34, 0.72);
+        --card: #ffffff;
+        --border: rgba(47, 111, 100, 0.22);
+        --shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
       }
 
       body {
         margin: 0;
         font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        background-color: var(--jade-bg);
-        color: var(--text-main);
+        background: var(--jade-bg);
+        color: var(--text);
       }
 
       a {
@@ -34,130 +38,184 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
       a:hover {
         text-decoration: underline;
       }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: none;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 14px;
+        background: var(--jade-main);
+        color: white;
+        font-weight: 600;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        transition: transform 160ms ease, filter 160ms ease;
+      }
+
+      .btn:hover {
+        text-decoration: none;
+        transform: translateY(-1px);
+        filter: brightness(0.98);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--jade-dark);
+        border: 1px solid var(--border);
+        font-weight: 600;
+      }
+
+      .btn-secondary:hover {
+        filter: none;
+      }
+
+      .cover {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        background: var(--jade-soft);
+      }
+
+      .section-title {
+        font-size: 28px;
+        margin: 0 0 14px;
+        letter-spacing: -0.2px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
     </style>
   </head>
 
   <body>
-    <main style="max-width: 980px; margin: 0 auto; padding: 48px 20px;">
-
+    <main style="max-width: 1020px; margin: 0 auto; padding: 52px 20px;">
       <!-- Title -->
-      <header style="display:flex; justify-content:space-between; align-items:center; gap: 18px; flex-wrap: wrap;">
-        <div>
-          <h1 style="margin:0; font-size: 42px;">{siteTitle}</h1>
-          <p style="margin:10px 0 0; font-size: 18px; line-height:1.6; opacity: 0.9;">
+      <header style="display:flex; justify-content:space-between; align-items:flex-start; gap: 18px; flex-wrap: wrap;">
+        <div style="max-width: 68ch;">
+          <h1 style="margin:0; font-size: 44px; letter-spacing: -0.6px;">{siteTitle}</h1>
+          <p class="muted" style="margin:12px 0 0; font-size: 18px; line-height:1.7;">
             {tagline}
           </p>
+
+          <div style="margin-top: 16px; display:flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn" href="#subscribe">Subscribe</a>
+            <a class="btn btn-secondary" href="#books">View books</a>
+          </div>
         </div>
 
-        <nav style="display:flex; gap: 16px; font-size: 15px;">
+        <nav style="display:flex; gap: 16px; font-size: 15px; padding-top: 8px;">
           <a href="#author">Author</a>
           <a href="#books">Books</a>
           <a href="#subscribe">Newsletter</a>
         </nav>
       </header>
 
-      <!-- Author -->
-      <section
-        id="author"
-        style="margin-top: 52px; display:grid; grid-template-columns: 160px 1fr; gap: 24px; align-items:start;"
-      >
-        <div
-          style="width:160px; height:160px; border-radius: 50%;
-          background: var(--jade-soft);
-          display:flex; align-items:center; justify-content:center;
-          border: 1px solid var(--border-soft);"
-        >
-          Author photo
-        </div>
+      <!-- Author pic + bio -->
+      <section id="author" style="margin-top: 54px;">
+        <h2 class="section-title">About the Author</h2>
 
-        <div>
-          <h2 style="margin:0 0 10px; font-size: 28px;">About the Author</h2>
-          <p style="margin:0; line-height:1.75; max-width: 75ch;">
-           Hi, I'm Deena. I'm a writer, an educator, and a researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story, because they all meet in everyday wonder.
-          </p>
+        <div class="card" style="display:grid; grid-template-columns: 150px 1fr; gap: 22px; align-items:center;">
+          <img
+            src="/images/author.jpg"
+            alt="Author photo"
+            style="width:150px; height:150px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); background: var(--jade-soft);"
+          />
+
+          <div>
+            <p style="margin:0; line-height:1.75; font-size: 16px;">
+              <strong>Deena Vardhini, PhD</strong> 
+             Hi, I'm Deena. I'm a writer, an educator, and a researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story, because they all meet in everyday wonder.
+            </p>
+            <p class="muted" style="margin:10px 0 0; line-height:1.7;">
+              Okinawa, Japan • Writing, teaching, and building resources for thoughtful living
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- Books -->
       <section id="books" style="margin-top: 56px;">
-        <h2 style="font-size: 28px; margin: 0 0 18px;">Books</h2>
+        <h2 class="section-title">Books</h2>
+        <p class="muted" style="margin:0 0 18px; line-height:1.7;">
+          Browse current titles and upcoming projects.
+        </p>
 
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-
-          <!-- Book card template -->
-          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
-            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
-              Cover image
-            </div>
+        <div class="grid">
+          <article class="card">
+            <img class="cover" src="/images/books/joy-365.jpg" alt="Embellish & Nourish Your Heart with Joy cover" />
             <h3 style="margin: 14px 0 6px;">Embellish & Nourish Your Heart with Joy</h3>
-            <p style="margin:0; opacity:0.85; font-size: 14px;">365 days of living in the Word</p>
+            <p class="muted" style="margin:0; font-size: 14px;">365 days of living in the Word</p>
           </article>
 
-          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
-            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
-              Cover image
-            </div>
+          <article class="card">
+            <img class="cover" src="/images/books/speak-life.jpg" alt="Speak Life cover" />
             <h3 style="margin: 14px 0 6px;">Speak Life</h3>
-            <p style="margin:0; opacity:0.85; font-size: 14px;">The power of words</p>
+            <p class="muted" style="margin:0; font-size: 14px;">The power of words</p>
           </article>
 
-          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
-            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
-              Cover image
-            </div>
+          <article class="card">
+            <img class="cover" src="/images/books/biology-of-becoming.jpg" alt="Biology of Becoming cover" />
             <h3 style="margin: 14px 0 6px;">Biology of Becoming</h3>
-            <p style="margin:0; opacity:0.85; font-size: 14px;">A guide for teens</p>
+            <p class="muted" style="margin:0; font-size: 14px;">A guide for teens</p>
           </article>
 
-          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
-            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
-              Cover image
-            </div>
+          <article class="card">
+            <img class="cover" src="/images/books/war-on-soils.jpg" alt="War on Soils cover" />
             <h3 style="margin: 14px 0 6px;">War on Soils</h3>
-            <p style="margin:0; opacity:0.85; font-size: 14px;">A call to heal with wisdom, science, and intention</p>
+            <p class="muted" style="margin:0; font-size: 14px;">A call to heal with wisdom, science, and intention</p>
           </article>
 
-          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
-            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
-              Cover image
-            </div>
+          <article class="card">
+            <img class="cover" src="/images/books/college-prep-cooking.jpg" alt="The College Prep of Cooking cover" />
             <h3 style="margin: 14px 0 6px;">The College Prep of Cooking</h3>
-            <p style="margin:0; opacity:0.85; font-size: 14px;">Vegetarian recipes for life in the dorm and beyond</p>
+            <p class="muted" style="margin:0; font-size: 14px;">Vegetarian recipes for life in the dorm and beyond</p>
           </article>
-
         </div>
       </section>
 
       <!-- Newsletter -->
-      <section
-        id="subscribe"
-        style="margin-top: 56px; padding: 28px;
-        background: var(--jade-soft);
-        border-radius: 18px;
-        border: 1px solid var(--border-soft);"
-      >
-        <h2 style="font-size: 28px; margin: 0 0 10px;">Stay Connected</h2>
-        <p style="margin:0 0 18px; line-height:1.6;">
-          Join my newsletter for new releases, reflections, and resources that encourage thoughtful living.
-        </p>
+      <section id="subscribe" style="margin-top: 60px;">
+        <div class="card" style="background: var(--jade-soft);">
+          <h2 class="section-title" style="margin-bottom: 10px;">Stay Connected</h2>
+          <p style="margin:0 0 18px; line-height:1.7;">
+            Join my newsletter for new releases, reflections, and resources that encourage thoughtful living.
+          </p>
 
-        <a
-          href="#"
-          style="display:inline-block;
-          padding: 12px 20px;
-          border-radius: 14px;
-          background: var(--jade-main);
-          color: white;
-          font-weight: 500;"
-        >
-          Subscribe to the newsletter
-        </a>
+          <!-- Paste Mailchimp or Kit embed code below this line -->
+          <div id="newsletter-embed" style="margin-top: 10px;">
+            <a class="btn" href="#" aria-label="Subscribe to the newsletter">Subscribe</a>
+            <p class="muted" style="margin:10px 0 0; font-size: 14px;">
+              Next step: replace this button with your Mailchimp or Kit embedded form.
+            </p>
+          </div>
+          <!-- Paste embed code above this line -->
+        </div>
       </section>
 
-      <footer style="margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--border-soft); opacity: 0.85;">
+      <footer style="margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted);">
         © 2025 Embellish & Nourish. All rights reserved.
       </footer>
-
     </main>
   </body>
 </html>
