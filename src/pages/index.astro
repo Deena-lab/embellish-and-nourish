@@ -1,50 +1,96 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const siteTitle = "Embellish & Nourish";
+const tagline = "Hi, I'm Deena. I'm a writer, an educator, and researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story; because they all meet in everyday wonder.";
 ---
 
-<!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{siteTitle}</title>
+  </head>
+
+  <body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0;">
+    <main style="max-width: 980px; margin: 0 auto; padding: 44px 18px;">
+      <header style="display:flex; justify-content:space-between; align-items:center; gap: 16px; flex-wrap: wrap;">
+        <div>
+          <h1 style="margin:0; font-size: 40px;">{siteTitle}</h1>
+          <p style="margin:10px 0 0; font-size: 18px; line-height:1.5; opacity: 0.85;">{tagline}</p>
+        </div>
+
+        <nav style="display:flex; gap: 14px; font-size: 15px;">
+          <a href="#books">Books</a>
+          <a href="#about">About</a>
+          <a href="#subscribe">Subscribe</a>
+        </nav>
+      </header>
+
+      <section style="margin-top: 28px; padding: 20px; border: 1px solid rgba(0,0,0,0.14); border-radius: 14px;">
+        <h2 style="margin:0 0 10px; font-size: 22px;">Start here</h2>
+        <p style="margin:0 0 16px; line-height:1.65;">
+          Gentle, practical resources for teens, families, and readers who want clarity, courage, and calm.
+        </p>
+
+        <div style="display:flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#books" style="padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.18); text-decoration:none;">
+            View books
+          </a>
+          <a href="#subscribe" style="padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.18); text-decoration:none;">
+            Subscribe to newsletter
+          </a>
+        </div>
+      </section>
+
+      <section id="books" style="margin-top: 42px;">
+        <h2 style="font-size: 26px; margin: 0 0 14px;">Featured books</h2>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
+            <div style="height: 240px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+              Cover image
+            </div>
+            <h3 style="margin: 12px 0 6px;">Biology of Becoming</h3>
+            <p style="margin:0; opacity:0.8; font-size: 14px;">A guide for teens</p>
+          </article>
+
+          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
+            <div style="height: 240px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+              Cover image
+            </div>
+            <h3 style="margin: 12px 0 6px;">Speak Life</h3>
+            <p style="margin:0; opacity:0.8; font-size: 14px;">Words that shape families</p>
+          </article>
+
+          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
+            <div style="height: 240px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+              Cover image
+            </div>
+            <h3 style="margin: 12px 0 6px;">War on Soils</h3>
+            <p style="margin:0; opacity:0.8; font-size: 14px;">A call to heal with wisdom</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" style="margin-top: 42px;">
+        <h2 style="font-size: 26px; margin: 0 0 10px;">About</h2>
+        <p style="margin:0; line-height:1.7; max-width: 75ch;">
+          Embellish & Nourish is where science, Scripture, and storytelling meet. This space exists to help readers grow in clarity, courage, and compassion through thoughtful resources and practical guidance.
+        </p>
+      </section>
+
+      <section id="subscribe" style="margin-top: 42px; padding: 20px; border: 1px solid rgba(0,0,0,0.14); border-radius: 14px;">
+        <h2 style="font-size: 26px; margin: 0 0 10px;">Newsletter</h2>
+        <p style="margin:0 0 14px; line-height:1.6; opacity:0.85;">
+          Monthly notes with new releases, free resources, and encouragement.
+        </p>
+        <p style="margin:0; opacity:0.8;">
+          Next step: we will add your signup form here.
+        </p>
+      </section>
+
+      <footer style="margin-top: 54px; padding-top: 18px; border-top: 1px solid rgba(0,0,0,0.14); opacity: 0.8;">
+        © 2025 Embellish & Nourish. All rights reserved.
+      </footer>
+    </main>
+  </body>
 </html>
