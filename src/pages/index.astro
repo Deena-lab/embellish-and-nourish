@@ -8,99 +8,153 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{siteTitle}</title>
+
+    <style>
+      :root {
+        --jade-bg: #f3fbf8;
+        --jade-soft: #dff3ec;
+        --jade-main: #6fb7a7;
+        --jade-dark: #3f7f73;
+        --text-main: #1f2d2a;
+        --border-soft: rgba(63, 127, 115, 0.25);
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background-color: var(--jade-bg);
+        color: var(--text-main);
+      }
+
+      a {
+        color: var(--jade-dark);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
 
-  <body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0;">
-    <main style="max-width: 980px; margin: 0 auto; padding: 44px 18px;">
+  <body>
+    <main style="max-width: 980px; margin: 0 auto; padding: 48px 20px;">
 
       <!-- Title -->
-      <header style="display:flex; justify-content:space-between; align-items:center; gap: 16px; flex-wrap: wrap;">
+      <header style="display:flex; justify-content:space-between; align-items:center; gap: 18px; flex-wrap: wrap;">
         <div>
-          <h1 style="margin:0; font-size: 40px;">{siteTitle}</h1>
-          <p style="margin:10px 0 0; font-size: 18px; line-height:1.5; opacity: 0.85;">{tagline}</p>
+          <h1 style="margin:0; font-size: 42px;">{siteTitle}</h1>
+          <p style="margin:10px 0 0; font-size: 18px; line-height:1.6; opacity: 0.9;">
+            {tagline}
+          </p>
         </div>
 
-        <nav style="display:flex; gap: 14px; font-size: 15px;">
+        <nav style="display:flex; gap: 16px; font-size: 15px;">
           <a href="#author">Author</a>
           <a href="#books">Books</a>
           <a href="#subscribe">Newsletter</a>
         </nav>
       </header>
 
-      <!-- Author pic + bio -->
-      <section id="author" style="margin-top: 44px; display:grid; grid-template-columns: 150px 1fr; gap: 22px; align-items:start;">
-        <div style="width:150px; height:150px; border-radius: 50%; background: rgba(0,0,0,0.08); display:flex; align-items:center; justify-content:center;">
+      <!-- Author -->
+      <section
+        id="author"
+        style="margin-top: 52px; display:grid; grid-template-columns: 160px 1fr; gap: 24px; align-items:start;"
+      >
+        <div
+          style="width:160px; height:160px; border-radius: 50%;
+          background: var(--jade-soft);
+          display:flex; align-items:center; justify-content:center;
+          border: 1px solid var(--border-soft);"
+        >
           Author photo
         </div>
 
         <div>
-          <h2 style="margin:0 0 8px; font-size: 26px;">About the Author</h2>
-          <p style="margin:0; line-height:1.7; max-width: 75ch;">
-            Hi, I'm Deena. I'm a writer, an educator, and a researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story, because they all meet in everyday wonder.
+          <h2 style="margin:0 0 10px; font-size: 28px;">About the Author</h2>
+          <p style="margin:0; line-height:1.75; max-width: 75ch;">
+           Hi, I'm Deena. I'm a writer, an educator, and a researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story, because they all meet in everyday wonder.
+          </p>
+        </div>
       </section>
 
       <!-- Books -->
-      <section id="books" style="margin-top: 48px;">
-        <h2 style="font-size: 26px; margin: 0 0 14px;">Books</h2>
+      <section id="books" style="margin-top: 56px;">
+        <h2 style="font-size: 28px; margin: 0 0 18px;">Books</h2>
 
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px;">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
 
-          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+          <!-- Book card template -->
+          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
+            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
               Cover image
             </div>
-            <h3 style="margin: 12px 0 6px;">Embellish & Nourish Your Heart with Joy</h3>
-            <p style="margin:0; opacity:0.8; font-size: 14px;">365 days of living in the Word</p>
+            <h3 style="margin: 14px 0 6px;">Embellish & Nourish Your Heart with Joy</h3>
+            <p style="margin:0; opacity:0.85; font-size: 14px;">365 days of living in the Word</p>
           </article>
 
-          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
+            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
               Cover image
             </div>
-            <h3 style="margin: 12px 0 6px;">Speak Life</h3>
-            <p style="margin:0; opacity:0.8; font-size: 14px;">The power of words</p>
+            <h3 style="margin: 14px 0 6px;">Speak Life</h3>
+            <p style="margin:0; opacity:0.85; font-size: 14px;">The power of words</p>
           </article>
 
-          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
+            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
               Cover image
             </div>
-            <h3 style="margin: 12px 0 6px;">Biology of Becoming</h3>
-            <p style="margin:0; opacity:0.8; font-size: 14px;">A guide for teens</p>
+            <h3 style="margin: 14px 0 6px;">Biology of Becoming</h3>
+            <p style="margin:0; opacity:0.85; font-size: 14px;">A guide for teens</p>
           </article>
 
-          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
+            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
               Cover image
             </div>
-            <h3 style="margin: 12px 0 6px;">War on Soils</h3>
-            <p style="margin:0; opacity:0.8; font-size: 14px;">A call to heal with wisdom, science, and intention</p>
+            <h3 style="margin: 14px 0 6px;">War on Soils</h3>
+            <p style="margin:0; opacity:0.85; font-size: 14px;">A call to heal with wisdom, science, and intention</p>
           </article>
 
-          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+          <article style="background:white; border: 1px solid var(--border-soft); border-radius: 16px; padding: 16px;">
+            <div style="height: 260px; border-radius: 12px; background: var(--jade-soft); display:flex; align-items:center; justify-content:center;">
               Cover image
             </div>
-            <h3 style="margin: 12px 0 6px;">The College Prep of Cooking</h3>
-            <p style="margin:0; opacity:0.8; font-size: 14px;">Vegetarian recipes for life in the dorm and beyond</p>
+            <h3 style="margin: 14px 0 6px;">The College Prep of Cooking</h3>
+            <p style="margin:0; opacity:0.85; font-size: 14px;">Vegetarian recipes for life in the dorm and beyond</p>
           </article>
 
         </div>
       </section>
 
       <!-- Newsletter -->
-      <section id="subscribe" style="margin-top: 48px; padding: 24px; border: 1px solid rgba(0,0,0,0.14); border-radius: 14px;">
-        <h2 style="font-size: 26px; margin: 0 0 10px;">Stay Connected</h2>
-        <p style="margin:0 0 16px; line-height:1.6; opacity:0.85;">
+      <section
+        id="subscribe"
+        style="margin-top: 56px; padding: 28px;
+        background: var(--jade-soft);
+        border-radius: 18px;
+        border: 1px solid var(--border-soft);"
+      >
+        <h2 style="font-size: 28px; margin: 0 0 10px;">Stay Connected</h2>
+        <p style="margin:0 0 18px; line-height:1.6;">
           Join my newsletter for new releases, reflections, and resources that encourage thoughtful living.
         </p>
 
-        <a href="#" style="display:inline-block; padding: 12px 18px; border-radius: 14px; border: 1px solid rgba(0,0,0,0.18); text-decoration:none;">
+        <a
+          href="#"
+          style="display:inline-block;
+          padding: 12px 20px;
+          border-radius: 14px;
+          background: var(--jade-main);
+          color: white;
+          font-weight: 500;"
+        >
           Subscribe to the newsletter
         </a>
       </section>
 
-      <footer style="margin-top: 54px; padding-top: 18px; border-top: 1px solid rgba(0,0,0,0.14); opacity: 0.8;">
+      <footer style="margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--border-soft); opacity: 0.85;">
         © 2025 Embellish & Nourish. All rights reserved.
       </footer>
 
