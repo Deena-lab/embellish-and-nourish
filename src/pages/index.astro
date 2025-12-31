@@ -1,22 +1,7 @@
 ---
-const siteTitle = "Embellish and Nourish";
-
-<section id="author" style="margin-top: 48px; display:grid; grid-template-columns: 140px 1fr; gap: 22px; align-items:start;">
-  
-  <div style="width:140px; height:140px; border-radius: 50%; background: rgba(0,0,0,0.08); display:flex; align-items:center; justify-content:center;">
-    Author photo
-  </div>
-
-  <div>
-    <h2 style="margin:0 0 8px; font-size: 26px;">About the Author</h2>
-    <p style="margin:0; line-height:1.7; max-width: 75ch;">
-    
-"Hi, I'm Deena. I'm a writer, an educator, and a researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story, because they all meet in everyday wonder.";
+const siteTitle = "Embellish & Nourish";
+const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
 ---
-    </p>
-  </div>
-
-</s
 
 <html lang="en">
   <head>
@@ -27,6 +12,8 @@ const siteTitle = "Embellish and Nourish";
 
   <body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0;">
     <main style="max-width: 980px; margin: 0 auto; padding: 44px 18px;">
+
+      <!-- Title -->
       <header style="display:flex; justify-content:space-between; align-items:center; gap: 16px; flex-wrap: wrap;">
         <div>
           <h1 style="margin:0; font-size: 40px;">{siteTitle}</h1>
@@ -34,98 +21,89 @@ const siteTitle = "Embellish and Nourish";
         </div>
 
         <nav style="display:flex; gap: 14px; font-size: 15px;">
+          <a href="#author">Author</a>
           <a href="#books">Books</a>
-          <a href="#about">About</a>
-          <a href="#subscribe">Subscribe</a>
+          <a href="#subscribe">Newsletter</a>
         </nav>
       </header>
 
-      <section style="margin-top: 28px; padding: 20px; border: 1px solid rgba(0,0,0,0.14); border-radius: 14px;">
-        <h2 style="margin:0 0 10px; font-size: 22px;">Start here</h2>
-        <p style="margin:0 0 16px; line-height:1.65;">
-          Gentle, practical resources for teens, families, and readers who want clarity, courage, and calm.
-        </p>
+      <!-- Author pic + bio -->
+      <section id="author" style="margin-top: 44px; display:grid; grid-template-columns: 150px 1fr; gap: 22px; align-items:start;">
+        <div style="width:150px; height:150px; border-radius: 50%; background: rgba(0,0,0,0.08); display:flex; align-items:center; justify-content:center;">
+          Author photo
+        </div>
 
-        <div style="display:flex; gap: 12px; flex-wrap: wrap;">
-          <a href="#books" style="padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.18); text-decoration:none;">
-            View books
-          </a>
-          <a href="#subscribe" style="padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.18); text-decoration:none;">
-            Subscribe to newsletter
-          </a>
+        <div>
+          <h2 style="margin:0 0 8px; font-size: 26px;">About the Author</h2>
+          <p style="margin:0; line-height:1.7; max-width: 75ch;">
+            Hi, I'm Deena. I'm a writer, an educator, and a researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story, because they all meet in everyday wonder.
+      </section>
+
+      <!-- Books -->
+      <section id="books" style="margin-top: 48px;">
+        <h2 style="font-size: 26px; margin: 0 0 14px;">Books</h2>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px;">
+
+          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
+            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+              Cover image
+            </div>
+            <h3 style="margin: 12px 0 6px;">Embellish & Nourish Your Heart with Joy</h3>
+            <p style="margin:0; opacity:0.8; font-size: 14px;">365 days of living in the Word</p>
+          </article>
+
+          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
+            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+              Cover image
+            </div>
+            <h3 style="margin: 12px 0 6px;">Speak Life</h3>
+            <p style="margin:0; opacity:0.8; font-size: 14px;">The power of words</p>
+          </article>
+
+          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
+            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+              Cover image
+            </div>
+            <h3 style="margin: 12px 0 6px;">Biology of Becoming</h3>
+            <p style="margin:0; opacity:0.8; font-size: 14px;">A guide for teens</p>
+          </article>
+
+          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
+            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+              Cover image
+            </div>
+            <h3 style="margin: 12px 0 6px;">War on Soils</h3>
+            <p style="margin:0; opacity:0.8; font-size: 14px;">A call to heal with wisdom, science, and intention</p>
+          </article>
+
+          <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
+            <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
+              Cover image
+            </div>
+            <h3 style="margin: 12px 0 6px;">The College Prep of Cooking</h3>
+            <p style="margin:0; opacity:0.8; font-size: 14px;">Vegetarian recipes for life in the dorm and beyond</p>
+          </article>
+
         </div>
       </section>
 
-     <section id="books" style="margin-top: 42px;">
-  <h2 style="font-size: 26px; margin: 0 0 14px;">Books</h2>
-
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px;">
-
-    <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-      <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
-        Cover image
-      </div>
-      <h3 style="margin: 12px 0 6px;">Embellish & Nourish Your Heart with Joy</h3>
-      <p style="margin:0; opacity:0.8; font-size: 14px;">365 days of living in the Word</p>
-    </article>
-
-    <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-      <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
-        Cover image
-      </div>
-      <h3 style="margin: 12px 0 6px;">Speak Life</h3>
-      <p style="margin:0; opacity:0.8; font-size: 14px;">The power of words</p>
-    </article>
-
-    <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-      <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
-        Cover image
-      </div>
-      <h3 style="margin: 12px 0 6px;">Biology of Becoming</h3>
-      <p style="margin:0; opacity:0.8; font-size: 14px;">A guide for teens</p>
-    </article>
-
-    <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-      <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
-        Cover image
-      </div>
-      <h3 style="margin: 12px 0 6px;">War on Soils</h3>
-      <p style="margin:0; opacity:0.8; font-size: 14px;">A call to heal with wisdom, science, and intention</p>
-    </article>
-
-    <article style="border: 1px solid rgba(0,0,0,0.14); border-radius: 14px; padding: 14px;">
-      <div style="height: 260px; border-radius: 10px; background: rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:center;">
-        Cover image
-      </div>
-      <h3 style="margin: 12px 0 6px;">The College Prep of Cooking</h3>
-      <p style="margin:0; opacity:0.8; font-size: 14px;">Vegetarian recipes for life in the dorm and beyond</p>
-    </article>
-
-  </div>
-</section>
-
-      <section id="about" style="margin-top: 42px;">
-        <h2 style="font-size: 26px; margin: 0 0 10px;">About</h2>
-        <p style="margin:0; line-height:1.7; max-width: 75ch;">
-          Embellish & Nourish is where science, Scripture, and storytelling meet. This space exists to help readers grow in clarity, courage, and compassion through thoughtful resources and practical guidance.
-        </p>
-      </section>
-
+      <!-- Newsletter -->
       <section id="subscribe" style="margin-top: 48px; padding: 24px; border: 1px solid rgba(0,0,0,0.14); border-radius: 14px;">
-  <h2 style="font-size: 26px; margin: 0 0 10px;">Stay Connected</h2>
-  <p style="margin:0 0 16px; line-height:1.6; opacity:0.85;">
-    Join my newsletter for new releases, reflections, and resources that encourage thoughtful living.
-  </p>
+        <h2 style="font-size: 26px; margin: 0 0 10px;">Stay Connected</h2>
+        <p style="margin:0 0 16px; line-height:1.6; opacity:0.85;">
+          Join my newsletter for new releases, reflections, and resources that encourage thoughtful living.
+        </p>
 
-  <a href="#" style="display:inline-block; padding: 12px 18px; border-radius: 14px; border: 1px solid rgba(0,0,0,0.18); text-decoration:none;">
-    Subscribe to the newsletter
-  </a>
-</section>
-
+        <a href="#" style="display:inline-block; padding: 12px 18px; border-radius: 14px; border: 1px solid rgba(0,0,0,0.18); text-decoration:none;">
+          Subscribe to the newsletter
+        </a>
+      </section>
 
       <footer style="margin-top: 54px; padding-top: 18px; border-top: 1px solid rgba(0,0,0,0.14); opacity: 0.8;">
         © 2025 Embellish & Nourish. All rights reserved.
       </footer>
+
     </main>
   </body>
 </html>
