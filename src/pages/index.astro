@@ -1,5 +1,5 @@
 ---
-const siteTitle = "Embellish and Nourish";
+const siteTitle = "Embellish & Nourish";
 const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
 ---
 
@@ -54,25 +54,20 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
 
       .btn {
         display: inline-block;
-        padding: 12px 18px;
+        padding: 10px 16px;
         border-radius: 14px;
         background: var(--jade-main);
         color: white;
         font-weight: 600;
         border: 1px solid rgba(0, 0, 0, 0.06);
         transition: transform 160ms ease, filter 160ms ease;
+        font-size: 14px;
       }
 
       .btn:hover {
         text-decoration: none;
         transform: translateY(-1px);
         filter: brightness(0.97);
-      }
-
-      .btn-secondary {
-        background: transparent;
-        color: var(--jade-dark);
-        border: 1px solid var(--border);
       }
 
       .cover {
@@ -112,11 +107,6 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
           <p class="muted" style="margin:12px 0 0; font-size: 18px; line-height:1.7;">
             {tagline}
           </p>
-
-          <div style="margin-top: 18px; display:flex; gap: 12px; flex-wrap: wrap;">
-            <a class="btn" href="#subscribe">Subscribe</a>
-            <a class="btn btn-secondary" href="#books">View books</a>
-          </div>
         </div>
 
         <nav style="display:flex; gap: 18px; font-size: 15px; padding-top: 8px;">
@@ -161,35 +151,47 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
         </p>
 
         <div class="grid">
+
+          <!-- BOOK 1 -->
           <article class="card">
             <img class="cover" src="/images/books/joy-365.jpg" alt="Embellish & Nourish Your Heart with Joy cover" />
             <h3 style="margin:14px 0 6px;">Embellish & Nourish Your Heart with Joy</h3>
-            <p class="muted" style="margin:0; font-size:14px;">365 days of living in the Word</p>
+            <p class="muted" style="margin:0 0 12px; font-size:14px;">365 days of living in the Word</p>
+            <a class="btn" href="https://www.amazon.co.jp/dp/B0FF1MTLGB" target="_blank" rel="noopener">Buy on Amazon</a>
           </article>
 
+          <!-- BOOK 2 -->
           <article class="card">
             <img class="cover" src="/images/books/speak-life.jpg" alt="Speak Life cover" />
             <h3 style="margin:14px 0 6px;">Speak Life</h3>
-            <p class="muted" style="margin:0; font-size:14px;">The power of words</p>
+            <p class="muted" style="margin:0 0 12px; font-size:14px;">The power of words</p>
+            <a class="btn" href="https://www.amazon.co.jp/dp/B0G7C7CNKH" target="_blank" rel="noopener">Buy on Amazon</a>
           </article>
 
+          <!-- BOOK 3 -->
           <article class="card">
             <img class="cover" src="/images/books/biology-of-becoming.jpg" alt="Biology of Becoming cover" />
             <h3 style="margin:14px 0 6px;">Biology of Becoming</h3>
-            <p class="muted" style="margin:0; font-size:14px;">A guide for teens</p>
+            <p class="muted" style="margin:0 0 12px; font-size:14px;">A guide for teens</p>
+            <a class="btn" href="https://www.amazon.co.jp/dp/B0G6WYC2RZ" target="_blank" rel="noopener">Buy on Amazon</a>
           </article>
 
+          <!-- BOOK 4 -->
           <article class="card">
             <img class="cover" src="/images/books/war-on-soils.jpg" alt="War on Soils cover" />
             <h3 style="margin:14px 0 6px;">War on Soils</h3>
-            <p class="muted" style="margin:0; font-size:14px;">A call to heal with wisdom, science, and intention</p>
+            <p class="muted" style="margin:0 0 12px; font-size:14px;">A call to heal with wisdom, science, and intention</p>
+            <a class="btn" href="https://www.amazon.co.jp/dp/B0F3WC74JW" target="_blank" rel="noopener">Buy on Amazon</a>
           </article>
 
+          <!-- BOOK 5 -->
           <article class="card">
             <img class="cover" src="/images/books/college-prep-cooking.jpg" alt="The College Prep of Cooking cover" />
             <h3 style="margin:14px 0 6px;">The College Prep of Cooking</h3>
-            <p class="muted" style="margin:0; font-size:14px;">Vegetarian recipes for life in the dorm and beyond</p>
+            <p class="muted" style="margin:0 0 12px; font-size:14px;">Vegetarian recipes for life in the dorm and beyond</p>
+            <a class="btn" href="https://www.amazon.co.jp/dp/B0F3PB98Z4" target="_blank" rel="noopener">Buy on Amazon</a>
           </article>
+
         </div>
       </section>
 
@@ -201,12 +203,8 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
             Join my newsletter for new releases, reflections, and resources that encourage thoughtful living.
           </p>
 
-          <!-- Replace this button with Mailchimp or Kit embed -->
+          <!-- Replace this later with Mailchimp or Kit embed -->
           <a class="btn" href="#">Subscribe to the newsletter</a>
-
-          <p class="muted" style="margin-top:12px; font-size:14px;">
-            You can replace this button with your Mailchimp or Kit embedded form.
-          </p>
         </div>
       </section>
 
