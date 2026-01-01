@@ -1,12 +1,12 @@
 ---
-const siteTitle = "Embellish & Nourish";
+const siteTitle = "Embellish and Nourish";
 const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{siteTitle}</title>
 
     <style>
@@ -44,7 +44,6 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 16px;
-        box-shadow: none;
         transition: transform 160ms ease, box-shadow 160ms ease;
       }
 
@@ -67,18 +66,13 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
       .btn:hover {
         text-decoration: none;
         transform: translateY(-1px);
-        filter: brightness(0.98);
+        filter: brightness(0.97);
       }
 
       .btn-secondary {
         background: transparent;
         color: var(--jade-dark);
         border: 1px solid var(--border);
-        font-weight: 600;
-      }
-
-      .btn-secondary:hover {
-        filter: none;
       }
 
       .cover {
@@ -110,115 +104,116 @@ const tagline = "Science, Scripture, joy, and stories that help hearts grow.";
 
   <body>
     <main style="max-width: 1020px; margin: 0 auto; padding: 52px 20px;">
-      <!-- Title -->
-      <header style="display:flex; justify-content:space-between; align-items:flex-start; gap: 18px; flex-wrap: wrap;">
-        <div style="max-width: 68ch;">
+
+      <!-- HERO -->
+      <header style="display:flex; justify-content:space-between; align-items:flex-start; gap: 20px; flex-wrap: wrap;">
+        <div style="max-width: 70ch;">
           <h1 style="margin:0; font-size: 44px; letter-spacing: -0.6px;">{siteTitle}</h1>
           <p class="muted" style="margin:12px 0 0; font-size: 18px; line-height:1.7;">
             {tagline}
           </p>
 
-          <div style="margin-top: 16px; display:flex; gap: 12px; flex-wrap: wrap;">
+          <div style="margin-top: 18px; display:flex; gap: 12px; flex-wrap: wrap;">
             <a class="btn" href="#subscribe">Subscribe</a>
             <a class="btn btn-secondary" href="#books">View books</a>
           </div>
         </div>
 
-        <nav style="display:flex; gap: 16px; font-size: 15px; padding-top: 8px;">
+        <nav style="display:flex; gap: 18px; font-size: 15px; padding-top: 8px;">
           <a href="#author">Author</a>
           <a href="#books">Books</a>
           <a href="#subscribe">Newsletter</a>
         </nav>
       </header>
 
-     <section id="author" style="margin-top: 54px;">
-  <h2 class="section-title">About the Author</h2>
+      <!-- AUTHOR -->
+      <section id="author" style="margin-top: 56px;">
+        <h2 class="section-title">About the Author</h2>
 
-  <div class="card" style="display:grid; grid-template-columns: 150px 1fr; gap: 22px; align-items:center;">
-    <img
-      src="/images/author.jpg"
-      alt="Deena Vardhini author photo"
-      style="width:150px; height:150px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); background: var(--jade-soft);"
-    />
+        <div class="card" style="display:grid; grid-template-columns: 150px 1fr; gap: 22px; align-items:center;">
+          <img
+            src="/images/author.jpg"
+            alt="Deena Vardhini author photo"
+            style="width:150px; height:150px; border-radius:50%; object-fit:cover; border:1px solid var(--border); background:var(--jade-soft);"
+          />
 
-    <div>
-      <p style="margin:0; line-height:1.75; font-size: 16px;">
-        <strong>Deena Vardhini, PhD</strong>
-      </p>
+          <div>
+            <p style="margin:0; font-size:16px; line-height:1.75;">
+              <strong>Deena Vardhini, PhD</strong>
+            </p>
 
-      <p style="margin:10px 0 0; line-height:1.75; font-size: 16px;">
-        Hi, I'm Deena. I'm a writer, an educator, and a researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story, because they all meet in everyday wonder.
-      </p>
+            <p style="margin:10px 0 0; font-size:16px; line-height:1.75;">
+              Hi, I'm Deena. I'm a writer, an educator, and a researcher. I'm all about exploring Joy and Design in Faith, Science, Cooking, Art, and Story, because they all meet in everyday wonder.
+            </p>
 
-      <p class="muted" style="margin:12px 0 0; line-height:1.7;">
-        Okinawa, Japan • Writing, teaching, and building resources for thoughtful living
-      </p>
-    </div>
-  </div>
-</section>
+            <p class="muted" style="margin:12px 0 0; line-height:1.7;">
+              Okinawa, Japan • Writing, teaching, and building resources for thoughtful living
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <!-- Books -->
-      <section id="books" style="margin-top: 56px;">
+      <!-- BOOKS -->
+      <section id="books" style="margin-top: 60px;">
         <h2 class="section-title">Books</h2>
-        <p class="muted" style="margin:0 0 18px; line-height:1.7;">
-          Browse current titles and upcoming projects.
+        <p class="muted" style="margin:0 0 20px; line-height:1.7;">
+          Browse current titles and ongoing projects.
         </p>
 
         <div class="grid">
           <article class="card">
             <img class="cover" src="/images/books/joy-365.jpg" alt="Embellish & Nourish Your Heart with Joy cover" />
-            <h3 style="margin: 14px 0 6px;">Embellish & Nourish Your Heart with Joy</h3>
-            <p class="muted" style="margin:0; font-size: 14px;">365 days of living in the Word</p>
+            <h3 style="margin:14px 0 6px;">Embellish & Nourish Your Heart with Joy</h3>
+            <p class="muted" style="margin:0; font-size:14px;">365 days of living in the Word</p>
           </article>
 
           <article class="card">
-            <img class="cover" src="public/public/images/public/images/books/speak-life.jpg" alt="Speak Life cover" />
-            <h3 style="margin: 14px 0 6px;">Speak Life</h3>
-            <p class="muted" style="margin:0; font-size: 14px;">The power of words</p>
+            <img class="cover" src="/images/books/speak-life.jpg" alt="Speak Life cover" />
+            <h3 style="margin:14px 0 6px;">Speak Life</h3>
+            <p class="muted" style="margin:0; font-size:14px;">The power of words</p>
           </article>
 
           <article class="card">
             <img class="cover" src="/images/books/biology-of-becoming.jpg" alt="Biology of Becoming cover" />
-            <h3 style="margin: 14px 0 6px;">Biology of Becoming</h3>
-            <p class="muted" style="margin:0; font-size: 14px;">A guide for teens</p>
+            <h3 style="margin:14px 0 6px;">Biology of Becoming</h3>
+            <p class="muted" style="margin:0; font-size:14px;">A guide for teens</p>
           </article>
 
           <article class="card">
             <img class="cover" src="/images/books/war-on-soils.jpg" alt="War on Soils cover" />
-            <h3 style="margin: 14px 0 6px;">War on Soils</h3>
-            <p class="muted" style="margin:0; font-size: 14px;">A call to heal with wisdom, science, and intention</p>
+            <h3 style="margin:14px 0 6px;">War on Soils</h3>
+            <p class="muted" style="margin:0; font-size:14px;">A call to heal with wisdom, science, and intention</p>
           </article>
 
           <article class="card">
             <img class="cover" src="/images/books/college-prep-cooking.jpg" alt="The College Prep of Cooking cover" />
-            <h3 style="margin: 14px 0 6px;">The College Prep of Cooking</h3>
-            <p class="muted" style="margin:0; font-size: 14px;">Vegetarian recipes for life in the dorm and beyond</p>
+            <h3 style="margin:14px 0 6px;">The College Prep of Cooking</h3>
+            <p class="muted" style="margin:0; font-size:14px;">Vegetarian recipes for life in the dorm and beyond</p>
           </article>
         </div>
       </section>
 
-      <!-- Newsletter -->
-      <section id="subscribe" style="margin-top: 60px;">
-        <div class="card" style="background: var(--jade-soft);">
-          <h2 class="section-title" style="margin-bottom: 10px;">Stay Connected</h2>
+      <!-- NEWSLETTER -->
+      <section id="subscribe" style="margin-top: 64px;">
+        <div class="card" style="background:var(--jade-soft);">
+          <h2 class="section-title" style="margin-bottom:10px;">Stay Connected</h2>
           <p style="margin:0 0 18px; line-height:1.7;">
             Join my newsletter for new releases, reflections, and resources that encourage thoughtful living.
           </p>
 
-          <!-- Paste Mailchimp or Kit embed code below this line -->
-          <div id="newsletter-embed" style="margin-top: 10px;">
-            <a class="btn" href="#" aria-label="Subscribe to the newsletter">Subscribe</a>
-            <p class="muted" style="margin:10px 0 0; font-size: 14px;">
-              Next step: replace this button with your Mailchimp or Kit embedded form.
-            </p>
-          </div>
-          <!-- Paste embed code above this line -->
+          <!-- Replace this button with Mailchimp or Kit embed -->
+          <a class="btn" href="#">Subscribe to the newsletter</a>
+
+          <p class="muted" style="margin-top:12px; font-size:14px;">
+            You can replace this button with your Mailchimp or Kit embedded form.
+          </p>
         </div>
       </section>
 
-      <footer style="margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted);">
+      <footer style="margin-top: 70px; padding-top: 18px; border-top:1px solid var(--border); color:var(--muted);">
         © 2025 Embellish & Nourish. All rights reserved.
       </footer>
+
     </main>
   </body>
 </html>
